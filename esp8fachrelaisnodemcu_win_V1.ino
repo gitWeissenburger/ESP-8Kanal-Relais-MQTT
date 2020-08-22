@@ -86,7 +86,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   
   Serial.println();
 
-// Auswertung der empfangen Daten, 
+// Auswertung der empfangenen Daten, 
 // erste Ziffer = Relaisnummer
 // zweite Ziffer = 0 für LOW, 1 für High
   if ((char)payload[0] == '1') {
