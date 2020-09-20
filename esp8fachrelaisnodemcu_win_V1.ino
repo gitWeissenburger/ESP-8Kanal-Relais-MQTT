@@ -17,8 +17,8 @@ int value = 0;
 
 // Client ID, outTopic, inTopic1 und deviceName zum Publish und Subscribe für das MQTT Protokoll
 const char* clientID = "ESP8_Relais";
-const char* outTopic = "/WEP_Home/Terrasse";
-const char* inTopic1 = "/WEP_Home/Terrasse/Relais";
+const char* outTopic = "/Topic/Terrasse";
+const char* inTopic1 = "/Topic/Terrasse/Relais";
 const char* deviceName = "ESP8_Relais";
 
 int relay_pin1 = 5;
