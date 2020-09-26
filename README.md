@@ -1,15 +1,21 @@
 # ESP-8Kanal-Relais-MQTT
 ESP8266 NodeMCU – 8-fach Relaiskarte
+
 Verwendungszweck: 
+
 Diese 8-fach Relaiskarte wird zur Steuerung einer Terrassenbeleuchtung eingesetzt.
 Dachbeleuchtung für die Hauptterrasse und die Nebenterrasse
 2 x Bodenbeleuchtung mit 230V LED-Streifen 
 Beleuchtete Feuertonne
 Somit 3 Relais auf Reserve
+
 Aufbau:
+
 Aufgebaut ist das Ganze auf einem ESP8266-NodeMCU, kann aber auch auf einem WEMOS oder einem normalem ESP8266 aufgesetzt werden.
 Die Verkabelung ist in einem Unterverteiler realisiert. Dort wurde eine Zuleitung über einen Leitungsschutzschalter 10A abgesichert. Mit einem Hutschienen-Trafo 230V/5V wird die Spannungsversorgung für den ESP und die Relaiskarte zur Verfügung gestellt. Die Ableitungen zu den Verbrauchern ist über ein Rangierfeld aus Steckkontakten flexibel änderbar.
+
 Benötigte Hardware:
+
 ESP8266 Node-MCU 
 Beispiel: https://www.az-delivery.de/products/copy-of-nodemcu-lua-amica-v2-modul-mit-esp8266-12e?variant=36247507410&utm_medium=cpc&utm_source=Smarketer&utm_content=453269278475_c_&utm_term=&gclid=EAIaIQobChMInI_Kwumu6wIVweeyCh0XWA8wEAAYASAAEgJPdPD_BwE
 Oder 
@@ -24,20 +30,21 @@ Beispiel: https://www.reichelt.de/schaltnetzteil-hutschiene-12-w-5-v-2-4-a-mw-dr
 
  
 Bilder:
-Im Bild seht ihr die Zuleitung (ganz links über dem Sicherungselement) sowie die Ableitungen zu den einzelnen Steckdosen bzw. zu den Verbrauchern. Jeder Verbraucher ist dann wiederrum über das Rangierfeld an einen Relaiskontakt angeschlossen.
+Im Bild seht ihr die Zuleitung (ganz links über dem Sicherungselement) sowie die Ableitungen zu den einzelnen Steckdosen bzw. zu den Verbrauchern. 
+Jeder Verbraucher ist dann wiederrum über das Rangierfeld an einen Relaiskontakt angeschlossen.
 
 
 
 Verdrahtung ESP und Relaiskarte:
-ESP	Relaiskarte
-D0	R1
-D1	R2
-D2	R3
-D3	R4
-D4	R5
-D5	R6
-D6	R7
-D7	R8
+ESP			Relaiskarte
+D0			R1
+D1			R2
+D2			R3
+D3			R4
+D4			R5
+D5			R6
+D6			R7
+D7			R8
 Vin an 5V von Trafo	Pluseingang an 5V von Trafo
 Gnd an Masse von Trafo	Minuseingang an Masse von Trafo
 
@@ -49,6 +56,7 @@ Anschlussbild NODE MCU
 
 
 Installation:
+
 Den ESP an einem PC über USB Kabel anschließen, die Arduino Anwendung starten.
 Wenn alle Bibliotheken installiert sind sollte der ESP-NodeMCU wie auf dem folgenden Bild erkannt worden sein.
 Bild Arduino Connect NODE MCU
@@ -62,6 +70,7 @@ Anschließend den Sketch auf den ESP übertragen und beim ersten Bootvorgang üb
 
  
 Inbetriebnahme:
+
 Achtung! Beim Booten des ESP muss die angeschlossene Relaiskarte von der Spannungsversorgung getrennt werden. 
 Hintergrund. Die Relaiskarte zieht, je nach Relaisstellung, die Ausgänge (Dx – Dn) des ESP auf Masse. Dieser Lowpegel beeinflusst aber wiederrum das Bootverhalten des ESP. Daher!! Spannungsversorgung der Relaiskarte (5V) abstecken während des Bootvorgangs.
 
